@@ -16,7 +16,7 @@ function about()
     <div>
         <header class="header">
             <nav class="navbar">
-                <a class="title" target="_blank" href="/">WikiFind</a>
+                <a class="title" href="/">WikiFind</a>
                 <div class="nav-links-div">
                     <ul class="nav-links">
                         <li><a @click="home()">Home</a></li>
