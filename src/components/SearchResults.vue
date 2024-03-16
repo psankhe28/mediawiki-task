@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1200px-Wikipedia-logo-v2.svg.png" />
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1200px-Wikipedia-logo-v2.svg.png" class='image' />
         <cdx-field>
             <cdx-search-input v-model="params.gsrsearch" button-label="Search" @click="searchWiki"
                 @keyup.enter="searchWiki" placeholder="Enter your article of interest" />
