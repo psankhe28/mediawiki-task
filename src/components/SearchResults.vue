@@ -1,28 +1,23 @@
 <template>
     <div class="container">
-        <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1200px-Wikipedia-logo-v2.svg.png" class='image' />
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1200px-Wikipedia-logo-v2.svg.png" class='image' />
         <cdx-field>
-            <cdx-search-input v-model="params.gsrsearch" button-label="Search" @click="searchWiki"
-                @keyup.enter="searchWiki" placeholder="Enter your article of interest" />
+            <cdx-search-input v-model="params.gsrsearch" @keyup.enter="searchWiki" placeholder="Enter your article of interest" />
         </cdx-field>
         <div class="sub-container">
-            <span> Maximun no of articles to be retrived: </span>
-            <cdx-combobox v-model:selected="params.gsrlimit" :menu-items="menuItems"
-                placeholder="Select number of articles" class="query-box" @change="fetchDataFromWikipedia">
-            </cdx-combobox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span> Maximum number of articles to be retrieved: </span>
+            <cdx-combobox v-model:selected="params.gsrlimit" :menu-items="menuItems" placeholder="Select number of articles" class="query-box" @change="fetchDataFromWikipedia">
+            </cdx-combobox>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
-
     </div>
     <div class="main">
         <div v-if="data">
             <div class="accordion-container">
-                <!-- <p class="articles"><span class="limit">{{ data.length }}</span> articles retrived</p> -->
                 <cdx-accordion v-for="d in data" :key="d.id">
                     <template #title>
                         <span class="title-data">{{ d.title }}</span>
-                        <a class="link-button" :href="`https://en.m.wikipedia.org/wiki/${encodeURIComponent(d.title)}`"
-                            target="_blank">Link</a>
+                        <a class="link-button" :href="`https://en.m.wikipedia.org/wiki/${encodeURIComponent(d.title)}`" target="_blank">Link</a>
                     </template>
                     <div class="info">
                         {{ d.extract }}
@@ -30,11 +25,9 @@
                 </cdx-accordion>
             </div>
         </div>
-
         <div v-else-if="loading" class="loader">
             <PulseLoader color="#5DADE2" size="15px" :loading="true" />
         </div>
-
         <div class="arrow" v-if="data" @click="scrollToTop">
             <span class='arrow-icon'>&#8593;</span>
         </div>
@@ -106,6 +99,7 @@ async function fetchDataFromWikipedia() {
 }
 
 function searchWiki() {
+    console.log('Search initiated with query:', params.gsrsearch);
     fetchDataFromWikipedia()
         .catch(error => {
             console.error('Error searching Wikipedia:', error);
