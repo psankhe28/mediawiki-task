@@ -1,0 +1,38 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: black;
+    transition: all 0.35s ease;
+    margin-bottom: 100px;
+}
+.navbar {
+    width: 90vw;
+    height: 4rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 50%;
+}
+
+.nav-links-div {
+    width: 40%;
+    display: flex;
+}
+
+.nav-links{
+    display: flex;
+    width: 70%;
+    margin: auto;
+    list-style-type: none;
+    justify-content: space-evenly;
+}

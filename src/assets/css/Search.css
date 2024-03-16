@@ -1,0 +1,87 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.accordion-container {
+    margin-top: 20px;
+}
+
+.loader {
+    margin-top: 20px;
+    text-align: center;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 100px;
+}
+
+.label-text {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.title-data {
+    font-size: 20px;
+    text-transform: capitalize;
+    height: 10px;
+}
+
+.query-box {
+    margin-top: 10px;
+    width: 10px !important;
+}
+
+.articles {
+    text-align: center;
+}
+
+.limit {
+    font-weight: bold;
+}
+
+.link-button {
+    background-color: black;
+    padding: 2px 10px;
+    border-radius: 10px;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+.cdx-combobox__input.cdx-text-input{
+    min-width: 80px;
+    text-align: center;
+}
+
+.arrow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    width: 40px; 
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+  }
+
+  .arrow-icon{
+    font-weight: bold;
+    font-size: 20px;
+  }
