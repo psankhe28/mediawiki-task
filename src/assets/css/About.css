@@ -1,9 +1,7 @@
 .about {
-    background: rgb(163, 205, 252);
-    background: linear-gradient(360deg, rgb(245, 249, 255) 0%, rgb(163, 205, 252) 100%);
     padding: 100px 0 0 0;
     text-align: center;
-    height: 90%;
+    width: 100%;
     overflow: hidden;
 }
  
@@ -30,7 +28,6 @@
 .about-img {
     width: 20rem;
     height: 20rem;
-    margin-bottom: 200px;
 }
  
 .about-img img {
